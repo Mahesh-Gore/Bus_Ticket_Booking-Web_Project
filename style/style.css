@@ -1,0 +1,417 @@
+/* all page header */
+
+* {
+	box-sizing:border-box;
+}
+body {
+	margin:0;
+}
+.header {
+	padding:10px;
+	align-items: center;
+	background:#1abc9c;
+	color:white;
+	display: inline-flex;	
+	width:100%;
+	border:1px solid black;padding: 10px;
+	
+}
+.header .name {
+	font-size:40px;
+	margin:auto;
+	
+}
+.header .logo {
+	height:80px;
+	width:80px;
+}
+.header .logo img {
+	width:100%;
+	height:100%;
+	border-radius:100px;
+}
+.nav {
+	overflow: hidden;
+	background-color: #333;
+	position:sticky;
+	top: 0;
+	width: 100%;
+}
+.nav a {
+	float:left;
+	display: block;
+	color: #f2f2f2;
+	text-align:center;
+	text-decoration: none;
+	font-size: 18px;
+	width:150px;height:50px;padding:15px;
+	border:1px solid black;
+}
+.nav a:hover {
+	background: #ddd;
+	color: black;
+}
+.nav a.active {
+	background: #ddd;
+	color:black;
+}
+.nav i{padding-right:10px;}
+.nav .icon {
+	display: none;
+}
+.sname{display:none;}
+@media screen and (max-width:750px) {
+	.header .name{display:none;}
+	.header .sname{display:block;
+		margin: auto;
+		 font-size:40px;letter-spacing:2;}
+	.header .logo{
+		height:60px;
+		width:60px;
+	}
+	.nav a {display: none;}
+	.nav a.icon {
+		float:left;
+		display: block;
+		width:100px;
+		height:40px;
+		font-size: 14px;
+	}
+	.nav.responsive {position:sticky;}
+	.nav.responsive .icon {
+		position:relative;
+	}
+	.nav.responsive a {
+		float: none;
+		display: block;
+		width:100%;text-align:center;
+		font-size:14px;
+	}
+	/*.homebody .hbody_grid{
+		display:grid;grid-column: span 2;
+		grid-template-areas: "c1"
+		"c2";border:2px solid black;
+	}
+
+	.login{
+		grid-area:c2;border:2px solid black;
+	}
+	.homebody .imageslider{
+		width:100%;
+		height:200px;
+		grid-area:c1;	
+	
+	}*/
+	.hbody_grid{
+		display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+	}
+	.homebody .imageslider{
+		width:100%;
+		height:200px;
+	}
+	.hbody_grid .user_login,.admin_login{
+		font-size: 10px;
+	}
+	.homebody .wel {
+		letter-spacing:0;
+		word-spacing:5px;
+	}
+	.loginbody{
+		padding: 0px;
+	}
+	.loginbody table{
+		padding: 0px;
+	}
+
+	table th, table td{
+		display: block;
+
+	}
+	.feedback form{
+		margin: 10px;
+	}
+	.helpbody .info{
+		display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+	}
+}
+@media screen and (max-width:1000px) {
+	.header .name{
+		font-size:30px;
+	}
+	.hbody_grid{
+		display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+	}
+	.login{
+		margin: 0px;
+	}
+}
+	
+/* home.html page body css */
+
+.homebody {padding:20px;background:#d9f2e6;}
+.homebody .wel {
+	letter-spacing:1;
+	word-spacing:10px;
+	text-align: center;
+	font-size:4vw;
+}
+	
+.homebody .hbody_grid {
+	/*display:grid;
+	grid-template-columns: 1fr 1fr;*/
+	display: inline-flex;
+	width:100%;
+	margin-top: 10px;
+} 
+.homebody .imageslider {
+	max-width:700px;
+	max-height:320px;
+	overflow:hidden;
+	border:2px solid black;
+}
+.homebody .imageslider img {
+	width:100%;
+	height:100%;
+
+}
+.homebody .login{
+	padding-top: 20px;
+	margin: auto;
+	padding:5px;
+	text-align:center;
+}
+.homebody .user_login {
+	padding-bottom:20px;font-size:25px;
+}
+
+.homebody .admin_login {
+	padding-top:20px;
+}
+.homebody .admin_login{
+	border-top:2px solid orchid;font-size:25px;
+}
+.homebody .user_login input,.admin_login input {
+	height:40px;
+	width:120px;cursor:pointer;
+	border:1px solid orangered;
+	border-radius: 20px;
+	margin-left:20px;
+}
+.homebody .user_login input:hover,.admin_login input:hover {
+	background-color:orangered;
+	color:white;
+}
+/* feedback.html page body css */
+	
+.feedbackbody {padding-top:50px;
+padding-bottom: 50px;}
+.feedbackbody form {
+	margin: auto;
+	max-height:700px;
+	max-width:600px;
+}
+.feedbackbody table{
+	border-spacing: 10px;
+	width:95%;
+	margin: auto;
+	border-radius:10px;
+	color:black;
+	background:rgba(143, 166, 208,0.8);
+}
+.feedbackbody form .title{
+	font-size: 28px;
+	font-family: cursive;
+}
+.feedbackbody table th i{
+	padding-right:10px;
+}
+.feedbackbody input {
+	width:100%;
+	height:40px;
+	font-size:18px;
+	padding:5px;
+	margin-bottom:1em;
+}
+.feedbackbody textarea{
+	width:100%;
+	height:100px;
+	padding:5px;
+	margin-bottom:1em;
+	resize: none;
+}
+.feedbackbody input[type=submit] {
+	width:auto;
+	padding:5px 20px;
+	cursor:pointer;
+	border-radius: 20px;
+}
+.feedbackbody input[type=submit]:hover {
+	background-color: blue;
+	color:white;
+}
+/*about.html page body css*/
+
+.aboutbody {padding:20px;}
+.aboutbody p {
+	font-size:18px;
+	text-align:left;
+	padding:0px 20px;
+}
+.aboutbody b {
+	font-size:26px;
+	color:orange;
+}
+
+/*help.html page body css*/
+.helpbody{
+	padding:20px;
+}
+.helpbody .title{
+	font-size:25px;
+	margin:auto ;
+	padding: 10px;
+	border-bottom:2px solid black;
+	width:fit-content;
+}
+.helpbody .info{
+
+	display: flex;
+}
+.helpbody .contact, .helpbody .email, .helpbody .msg{
+	text-align: center;
+	margin: auto;
+	padding: 20px;
+}
+.helpbody .addr{
+	text-align: center;
+}
+.helpbody .addr u{
+	text-underline-position: under;
+}
+.helpbody .addr text{
+	margin-top: 10px;
+}
+/* login.php page css */
+
+.loginbody {padding-top:50px;
+	padding-bottom: 50px;}
+.loginbody form{
+	margin: auto;
+	max-height:800px;
+	max-width:600px;
+}
+.loginbody table {
+	width:95%;
+	font-size:20px;color:white;
+	background:rgba(0,0,0,0.8);
+	border: 1px solid black;text-align:center;
+	border-radius:30px;
+}
+.loginbody table .title{
+	font-size:30px;
+}
+.loginbody input[type=text],.loginbody input[type=password] {
+	height:40px;width:100%;font-size:20px;
+}
+.loginbody input[type=submit] {
+	width:auto;font-size:20px;cursor:pointer;
+}
+.loginbody a{padding-left:5px;}
+.loginbody a.rlink{
+	padding-left:30px;
+}
+.loginbody input[type=submit]:hover {
+	background-color:black;color:white;border:2px solid white;
+}
+.loginbody a {
+	color:white;
+}
+
+/* register.php page css */
+
+
+/* bookticket.php page css */
+.btk_navbar{
+	padding:20px;
+}
+.btk_navbar a{
+	color:black;
+	margin-left: 10px;
+}
+
+/* Payment.php */
+.paymentbody{
+	text-align: center;
+}
+.paymentbody .pay{
+	display: none;
+}
+.paymentbody .title{
+	padding: 20px;
+	text-align: center;
+	background-color: cadetblue;
+	font-size: 25px;
+	font-family:serif;
+	font-style: oblique;
+	font-weight: 600;
+	word-spacing: 20px;
+	letter-spacing:1px;
+}
+.paymentbody .details{
+	padding: 20px;
+}
+.paymentbody .buttons{
+	padding: 20px;
+	font-size: 18px;
+}
+.paymentbody .buttons button{
+	height:30px;
+	width:120px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-right:10px;
+	margin-left:10px;
+	margin-top: 10px;font-size: 16px;
+}
+.paymentbody .buttons button:hover{
+	background-color: coral;
+	color: white;
+}
+.paymentbody table{
+	margin: auto;
+	font-size: 18px;
+}
+.paymentbody table caption{
+	margin-bottom: 10px;
+}
+.paymentbody table input[type=button]{
+	margin-top:20px;
+	height:30px;
+	width:80px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+/* ticket.php page css */
+
+/* all pages footer */
+
+.footer {
+	padding:20px;
+	text-align:center;
+	background: #1abc9c;
+	color: white;
+}
+.footer .follow a {
+	text-decoration:none;
+	color:white;
+}
+.footer .follow a:hover {
+	color:black;
+}
